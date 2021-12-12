@@ -1,0 +1,10 @@
+.element__image-container {
+  width: 282px;
+  height: 282px;
+}
+
+@media (max-width: 950px) {
+  .element__image-container {
+    margin: auto;
+  }
+}
