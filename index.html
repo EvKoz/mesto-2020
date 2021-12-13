@@ -1,95 +1,113 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mesto</title>
+    <link rel="stylesheet" href="./pages/index.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mesto</title>
-  <link rel="stylesheet" href="./pages/index.css">
-</head>
-
-<body class='body'>
-  <header class='header'>
-    <a class='header__logo' href="#"></a>
-  </header>
-  <div class='profile'>
-    <div class='profile__avatar'></div>
-    <section class='profile__info'>
-      <section class='profile__info-name'>Жак-Ив Кусто</section>
-      <button class='profile__info-edit-button'></button>
-      <section class='profile__info-role'>Исследователь океана</section>
+  <body class="body">
+    <header class="header">
+      <a class="header__logo" href="#"></a>
+    </header>
+    <div class="profile">
+      <div class="profile__avatar"></div>
+      <section class="profile__info">
+        <section class="profile__info-name">Жак-Ив Кусто</section>
+        <button class="profile__info-edit-button"></button>
+        <section class="profile__info-role">Исследователь океана</section>
+      </section>
+      <button class="profile__add-button"></button>
+    </div>
+    <main class="elements">
+      <div class="element">
+        <div class="element__image-container">
+          <img
+            class="element__image"
+            src="./images/1088404.jpg"
+            alt="Горная крепость"
+          />
+        </div>
+        <div class="element__symbols-container">
+          <p class="element__text">Карачаевск</p>
+          <button class="element__like-button"></button>
+        </div>
+      </div>
+      <div class="element">
+        <div class="element__image-container">
+          <img
+            class="element__image"
+            alt="Эльбрус"
+            src="./images/1404681.jpg"
+          />
+        </div>
+        <div class="element__symbols-container">
+          <p class="element__text">Гора Эльбрус</p>
+          <button class="element__like-button"></button>
+        </div>
+      </div>
+      <div class="element">
+        <div class="element__image-container">
+          <img class="element__image" src="./images/1556355.jpg" alt="Домбай" />
+        </div>
+        <div class="element__symbols-container">
+          <p class="element__text">Домбай</p>
+          <button class="element__like-button"></button>
+        </div>
+      </div>
+      <div class="element">
+        <div class="element__image-container">
+          <img
+            class="element__image"
+            src="./images/1404681.jpg"
+            alt="Эльбрус"
+          />
+        </div>
+        <div class="element__symbols-container">
+          <p class="element__text">Гора Эльбрус</p>
+          <button class="element__like-button"></button>
+        </div>
+      </div>
+      <div class="element">
+        <div class="element__image-container">
+          <img class="element__image" src="./images/1556355.jpg" alt="Домбай" />
+        </div>
+        <div class="element__symbols-container">
+          <p class="element__text">Домбай</p>
+          <button class="element__like-button"></button>
+        </div>
+      </div>
+      <div class="element">
+        <div class="element__image-container">
+          <img
+            alt="Горная крепость"
+            class="element__image"
+            src="./images/1088404.jpg"
+          />
+        </div>
+        <div class="element__symbols-container">
+          <p class="element__text">Карачаево-Черкессия</p>
+          <button class="element__like-button"></button>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <h1 class="footer__copyright">&#169; 2020 Mesto Russia</h1>
+    </footer>
+    <!--Pop-up-->
+    <section class="pop-up">
+      <div class="pop-up__window">
+        <button class="pop-up__close-icon"></button>
+        <h2 class="pop-up__title">Редактировать профиль</h2>
+        <div class="pop-up__input">
+          <input type="text" placeholder="" class="pop-up__input-name" />
+          <input type="text" placeholder="" class="pop-up__input-role" />
+          <button class="pop-up__input-save" type="submit">Сохранить</button>
+        </div>
+      </div>
     </section>
-    <button class='profile__add-button'></button>
-  </div>
-  <main class='elements'>
-    <div class='element'>
-      <div class='element__image-container'><img class='element__image'
-          src='./images/1088404.jpg' alt='Горная крепость'></div>
-      <div class='element__symbols-container'>
-        <p class='element__text'>Карачаевск</p>
-        <button class='element__like-button'></button>
-      </div>
-    </div>
-    <div class='element'>
-      <div class='element__image-container'><img class='element__image' alt="Эльбрус" src='./images/1404681.jpg'></div>
-      <div class='element__symbols-container'>
-        <p class='element__text'>Гора Эльбрус</p>
-        <button class='element__like-button'></button>
-      </div>
-    </div>
-    <div class='element'>
-      <div class='element__image-container'><img class='element__image'
-          src='./images/1556355.jpg' alt='Домбай'></div>
-      <div class='element__symbols-container'>
-        <p class='element__text'>Домбай</p>
-        <button class='element__like-button'></button>
-      </div>
-    </div>
-    <div class='element'>
-      <div class='element__image-container'><img class='element__image'
-          src='./images/1404681.jpg' alt='Эльбрус'></div>
-      <div class='element__symbols-container'>
-        <p class='element__text'>Гора Эльбрус</p>
-        <button class='element__like-button'></button>
-      </div>
-    </div>
-    <div class='element'>
-      <div class='element__image-container'><img class='element__image'
-          src='./images/1556355.jpg' alt='Домбай'></div>
-      <div class='element__symbols-container'>
-        <p class='element__text'>Домбай</p>
-        <button class='element__like-button'></button>
-      </div>
-    </div>
-    <div class='element'>
-      <div class='element__image-container'><img alt='Горная крепость' class='element__image'
-          src='./images/1088404.jpg'></div>
-      <div class='element__symbols-container'>
-        <p class='element__text'>Карачаево-Черкессия</p>
-        <button class='element__like-button'></button>
-      </div>
-    </div>
-
-  </main>
-  <footer class='footer'>
-    <h1 class='footer__copyright'>&#169; 2020 Mesto Russia</h1>
-  </footer>
-  <!--Pop-up-->
-  <section class='pop-up'>
-
-    <div class='pop-up__window'>
-      <button class='pop-up__close-icon'></button>
-      <h2 class='pop-up__title'>Редактировать профиль</h2>
-      <div class='pop-up__input'>
-        <input type='text' placeholder="" class='pop-up__input-name'>
-        <input type="text" placeholder="" class='pop-up__input-role'>
-        <button class='pop-up__input-save' type='submit'>Сохранить</button>
-      </div>
-
-    </div>
-  </section>
-  <script src='./scripts/index.js'></script>
-</body>
-
+    <script src="./scripts/index.js"></script>
+  </body>
 </html>
