@@ -7,10 +7,11 @@
   background: none;
   border: none;
   cursor: pointer;
-  background-image: url(../../../images/button__close_white.png);
+  background-image: url(../../../images/Close_Icon.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  padding: 0;
 }
 
 .pop-up__close-icon:hover {

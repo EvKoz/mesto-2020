@@ -12,6 +12,7 @@
   color: #FFFFFF;
   border: none;
   cursor: pointer;
+  padding: 0;
 }
 
 .pop-up__input-save:hover {
