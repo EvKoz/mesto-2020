@@ -1,4 +1,4 @@
-.element__image {
+.content__element-image {
   width: 282px;
   height: 282px;
   margin: 0;
@@ -11,7 +11,7 @@
 }
 
 @media (max-width: 950px) {
-  .element__image {
+  .content__element-image {
     margin: auto;
   }
 }

@@ -12,10 +12,10 @@
 @import url(../blocks/profile/__edit-button/profile__edit-button.css);
 @import url(../blocks/content/content.css);
 @import url(../blocks/content/__element/content__element.css);
-@import url(../blocks/element/__image/element__image.css);
-@import url(../blocks/element/__text/element__text.css);
-@import url(../blocks/element/__symbols-container/element__symbols-container.css);
-@import url(../blocks/element/__like-button/element__like-button.css);
+@import url(../blocks/content/__element-image/content__element-image.css);
+@import url(../blocks/content/__element-text/content__element-text.css);
+@import url(../blocks/content/__element-symbols-container/content__element-symbols-container.css);
+@import url(../blocks/content/__element-like-button/content__element-like-button.css);
 @import url(../blocks/footer/__copyright/footer__copyright.css);
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/pop-up/pop-up.css);
