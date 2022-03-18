@@ -1,4 +1,4 @@
-.elements {
+.content {
   display: grid;
   margin: 51px auto 0;
   grid-template-columns: repeat(3, 1fr);
@@ -10,7 +10,7 @@
 }
 
 @media (max-width: 950px) {
-  .elements {
+  .content {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 1fr);
     margin-top: 36px;
