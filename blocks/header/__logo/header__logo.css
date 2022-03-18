@@ -4,7 +4,8 @@
   height: 33px;
   display: flex;
   margin: 0 0 41px;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 @media (max-width: 950px) {

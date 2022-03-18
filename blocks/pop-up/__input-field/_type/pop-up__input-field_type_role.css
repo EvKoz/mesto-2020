@@ -1,24 +1,3 @@
 .pop-up__input-field_type_role {
-  display: flex;
   margin: 30px auto 0;
-  width: 358px;
-  height: 14px;
-  font-family: "Inter", "Arial", sans-serif;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 17px;
-  border: none;
-  border-bottom: 1px solid #000000;
-  border-color: rgba(0, 0, 0, 0.2);
-  padding: 0 0 13px 0;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  outline: none;
-}
-
-@media (max-width: 950px) {
-  .pop-up__input-field_type_role {
-    width: 238px;
-  }
 }

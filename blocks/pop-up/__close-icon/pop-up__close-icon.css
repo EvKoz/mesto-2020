@@ -3,7 +3,7 @@
   height: 32px;
   position: relative;
   top: -40px;
-  left: 440px;
+  right: -438px;
   background: none;
   border: none;
   cursor: pointer;
@@ -22,7 +22,6 @@
   .pop-up__close-icon {
     width: 20px;
     height: 20px;
-    position: relative;
     top: -36px;
     left: 262px;
   }
