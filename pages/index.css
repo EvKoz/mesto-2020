@@ -1,23 +1,16 @@
 @import url(../vendor/normalize.css);
 @import url(../vendor/fonts/fonts.css);
 @import url(../blocks/body/body.css);
-@import url(../blocks/header/header.css);
-@import url(../blocks/header/__logo/header__logo.css);
-@import url(../blocks/profile/profile.css);
-@import url(../blocks/profile/__avatar/profile__avatar.css);
-@import url(../blocks/profile/__info/profile__info.css);
-@import url(../blocks/profile/__info-name/profile__info-name.css);
-@import url(../blocks/profile/__info-role/profile__info-role.css);
-@import url(../blocks/profile/__add-button/profile__add-button.css);
-@import url(../blocks/profile/__edit-button/profile__edit-button.css);
 @import url(../blocks/content/content.css);
 @import url(../blocks/content/__element/content__element.css);
 @import url(../blocks/content/__element-image/content__element-image.css);
 @import url(../blocks/content/__element-text/content__element-text.css);
 @import url(../blocks/content/__element-symbols-container/content__element-symbols-container.css);
 @import url(../blocks/content/__element-like-button/content__element-like-button.css);
-@import url(../blocks/footer/__copyright/footer__copyright.css);
 @import url(../blocks/footer/footer.css);
+@import url(../blocks/footer/__copyright/footer__copyright.css);
+@import url(../blocks/header/header.css);
+@import url(../blocks/header/__logo/header__logo.css);
 @import url(../blocks/pop-up/pop-up.css);
 @import url(../blocks/pop-up/_opened/pop-up_opened.css);
 @import url(../blocks/pop-up/__window/pop-up__window.css);
@@ -28,6 +21,13 @@
 @import url(../blocks/pop-up/__input-field/_type/pop-up__input-field_type_name.css);
 @import url(../blocks/pop-up/__input-field/pop-up__input-field.css);
 @import url(../blocks/pop-up/__input-save/pop-up__input-save.css);
+@import url(../blocks/profile/profile.css);
+@import url(../blocks/profile/__avatar/profile__avatar.css);
+@import url(../blocks/profile/__info/profile__info.css);
+@import url(../blocks/profile/__info-name/profile__info-name.css);
+@import url(../blocks/profile/__info-role/profile__info-role.css);
+@import url(../blocks/profile/__add-button/profile__add-button.css);
+@import url(../blocks/profile/__edit-button/profile__edit-button.css);
 
 /*не понимаю как правильно по БЭМ расположить CSS-папки и файлы
 для существующих в html вложенности и названиях классов*/
