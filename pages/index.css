@@ -28,6 +28,3 @@
 @import url(../blocks/profile/__info-role/profile__info-role.css);
 @import url(../blocks/profile/__add-button/profile__add-button.css);
 @import url(../blocks/profile/__edit-button/profile__edit-button.css);
-
-/*не понимаю как правильно по БЭМ расположить CSS-папки и файлы
-для существующих в html вложенности и названиях классов*/
