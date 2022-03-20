@@ -18,5 +18,6 @@
     text-align: center;
     grid-column-start: 2;
     align-self: start;
+    max-width: 189px;
   }
 }
