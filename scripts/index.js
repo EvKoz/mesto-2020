@@ -66,7 +66,7 @@ const createList = () => {
 const item = initialCards.map(el => {
   return `<li class="content__element">
   <button class="content__element-delete-button" type="button"></button>
-  <img alt="Горная крепость" class="content__element-image" src="${el.link}"/>
+  <img alt="Одно из любимых мест" class="content__element-image" src="${el.link}"/>
   <div class="content__element-symbols-container">
     <h2 class="content__element-text">${el.name}</h2>
     <button class="content__element-like-button" type="button"></button>
