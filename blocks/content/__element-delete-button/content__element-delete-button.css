@@ -3,7 +3,7 @@
   background: none;
   cursor: pointer;
   padding: 0;
-  background-image: url("../../../images/del.svg");
+  background-image: url('../../../images/del.svg');
   width: 18px;
   height: 19px;
   position: absolute;
