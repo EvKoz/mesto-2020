@@ -32,6 +32,8 @@ popupCloseButtonElement.addEventListener('click', closePopup);
 
 /*фичи ПР5 */
 
+const createContent = document.querySelector('.content');
+
 const initialCards = [
   {
     name: 'Архыз',
@@ -60,13 +62,20 @@ const initialCards = [
 ];
 
 const createList = () => {
-/*
-<li class="content__element">
-            <img class="content__element-image" src="./images/1556355.jpg" alt="Домбай"/>
-            <div class="content__element-symbols-container">
-              <h2 class="content__element-text">Домбай</h2>
-              <button class="content__element-like-button" type="button"></button>
-            </div>
-          </li>
-*/
-}
+
+const item = initialCards.map(el => {
+  return `<li class="content__element">
+  <button class="content__element-delete-button" type="button"></button>
+  <img alt="Горная крепость" class="content__element-image" src="${el.link}"/>
+  <div class="content__element-symbols-container">
+    <h2 class="content__element-text">${el.name}</h2>
+    <button class="content__element-like-button" type="button"></button>
+  </div>
+</li>`;
+}).join(' ');
+createContent.insertAdjacentHTML('afterbegin', item);
+};
+
+createList();
+
+
