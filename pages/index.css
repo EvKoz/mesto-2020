@@ -7,6 +7,8 @@
 @import url(../blocks/content/__element-text/content__element-text.css);
 @import url(../blocks/content/__element-symbols-container/content__element-symbols-container.css);
 @import url(../blocks/content/__element-like-button/content__element-like-button.css);
+@import url(../blocks/content/__element-delete-button/content__element-delete-button.css);
+@import url(../blocks/content/__element-like-button/_active/content__element-like-button_active.css);
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__copyright/footer__copyright.css);
 @import url(../blocks/header/header.css);
@@ -28,3 +30,4 @@
 @import url(../blocks/profile/__info-role/profile__info-role.css);
 @import url(../blocks/profile/__add-button/profile__add-button.css);
 @import url(../blocks/profile/__edit-button/profile__edit-button.css);
+

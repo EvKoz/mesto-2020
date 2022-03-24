@@ -28,6 +28,7 @@
       <section>
         <ul class="content">
           <li class="content__element">
+            <button class="content__element-delete-button" type="button"></button>
             <img
               class="content__element-image"
               src="./images/1088404.jpg"
@@ -42,7 +43,8 @@
             </div>
           </li>
           <li class="content__element">
-            <img
+            <button class="content__element-delete-button" type="button"></button>
+                        <img
               class="content__element-image"
               alt="Эльбрус"
               src="./images/1404681.jpg"
@@ -53,9 +55,10 @@
                 class="content__element-like-button"
                 type="button"
               ></button>
-            </div>
+                          </div>
           </li>
           <li class="content__element">
+            <button class="content__element-delete-button" type="button"></button>
             <img
               class="content__element-image"
               src="./images/1556355.jpg"
@@ -71,6 +74,7 @@
             </div>
           </li>
           <li class="content__element">
+            <button class="content__element-delete-button" type="button"></button>
             <img
               class="content__element-image"
               src="./images/1404681.jpg"
@@ -85,6 +89,7 @@
             </div>
           </li>
           <li class="content__element">
+            <button class="content__element-delete-button" type="button"></button>
             <img
               class="content__element-image"
               src="./images/1556355.jpg"
@@ -100,6 +105,7 @@
             </div>
           </li>
           <li class="content__element">
+            <button class="content__element-delete-button" type="button"></button>
             <img
               alt="Горная крепость"
               class="content__element-image"
@@ -138,7 +144,34 @@
           <button class="pop-up__input-save" type="submit">Сохранить</button>
         </form>
       </div>
-    </div>
     <script src="./scripts/index.js"></script>
+    <template>
+      const initialCards = [
+  {
+    name: 'Архыз',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
+  },
+  {
+    name: 'Челябинская область',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
+  },
+  {
+    name: 'Иваново',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
+  },
+  {
+    name: 'Камчатка',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
+  },
+  {
+    name: 'Холмогорский район',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
+  },
+  {
+    name: 'Байкал',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
+  }
+];
+    </template>
   </body>
 </html>

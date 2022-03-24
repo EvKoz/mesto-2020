@@ -1,13 +1,12 @@
-.content__element-like-button {
+.content__element-like-button_active {
   border: none;
   background-color: #FFFFFF;
   margin: 30px 20px 30px auto;
   cursor: pointer;
   padding: 0;
-  background-image: url('../../../images/button__like_disabled_black.svg');
+  background-image: url('../../../../images/button__like_activated_black.svg');
   width: 22px;
   height: 19px;
-  display: block;
 }
 
 .content__element-like-button:hover {
