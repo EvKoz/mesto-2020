@@ -1,4 +1,4 @@
-.pop-up__window_place{
+.pop-up__window_place {
     width: 430px;
     min-height: 330px;
     background-color: #ffffff;
@@ -8,7 +8,7 @@
     }
 
   @media (max-width: 950px) {
-    .pop-up__window {
+    .pop-up__window_place {
       width: 282px;
       min-height: 322px;
     }
