@@ -8,28 +8,30 @@ let inputNameElement = document.querySelector('.pop-up__input-field_type_name');
 let inputJobElement = document.querySelector('.pop-up__input-field_type_role');
 let saveButton = document.querySelector('.pop-up__input-save');
 const popupPlaceElement = document.querySelector('.pop-up__type_place')
-
-
+const popupPlaceCloseButtonElement = document.querySelector('.pop-up__close-icon_place');
+const popupPlaceOpenElement = document.querySelector('.profile__add-button');
 
 function openPlacePopup() {
-  popupPlaceElement.classList.add('pop-up_type_place_opened');
-  /*inputNameElement.value = nameElement.textContent;
-  inputJobElement.value = jobElement.textContent;*/
-};
+  popupPlaceElement.classList.add('pop-up_opened');
+  };
+
+  function openPopup() {
+    popupElement.classList.add('pop-up_opened');
+    inputNameElement.value = nameElement.textContent;
+    inputJobElement.value = jobElement.textContent;
+  };
 
 
+  popupOpenButtonElement.addEventListener('click', openPopup);
+  popupPlaceOpenElement.addEventListener('click', openPlacePopup);
 
 function closePlacePopup() {
-  popupElement.classList.remove('pop-up_type_place_opened');
+  popupPlaceElement.classList.remove('pop-up_opened');
 };
 
 
 
-function openPopup() {
-  popupElement.classList.add('pop-up_opened');
-  inputNameElement.value = nameElement.textContent;
-  inputJobElement.value = jobElement.textContent;
-};
+
 
 function closePopup() {
   popupElement.classList.remove('pop-up_opened');
@@ -42,12 +44,11 @@ function editProfile(evt) {
   closePopup();
 }
 
-popupOpenButtonElement.addEventListener('click', openPopup);
+
 profileElement.addEventListener('submit', editProfile);
 saveButton.addEventListener('click', editProfile);
 popupCloseButtonElement.addEventListener('click', closePopup);
-popupPlaceElement.addEventListener('click', openPlacePopup);
-
+popupPlaceCloseButtonElement.addEventListener('click', closePlacePopup);
 
 /*фичи ПР5 */
 
@@ -114,5 +115,3 @@ const addPlace = () => {
 };
 
 createList();
-
-

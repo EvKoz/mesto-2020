@@ -32,7 +32,6 @@
 @import url(../blocks/profile/__edit-button/profile__edit-button.css);
 /*ПР5*/
 @import url(../blocks/pop-up/_type/pop-up__type_place.css);
-@import url(../blocks/pop-up/_type/_opened/pop-up_type_place_opened.css);
 @import url(../blocks/pop-up/__window/_place/pop-up__window_place.css);
 @import url(../blocks/pop-up/__close-icon/_place/pop-up__close-icon_place.css);
 @import url(../blocks/pop-up/__title/_place/pop-up__title_place.css);
@@ -40,3 +39,5 @@
 @import url(../blocks/pop-up/__input-field/_type/pop-up__input-field_type_place.css);
 @import url(../blocks/pop-up/__input-field/_type/pop-up__input-field_type_link.css);
 @import url(../blocks/pop-up/__input-save/_place/pop-up__input-save_place.css);
+
+@import url(../blocks/pop-up/_opened/pop-up_opened.css);
