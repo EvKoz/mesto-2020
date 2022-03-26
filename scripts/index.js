@@ -12,6 +12,11 @@ const popupPlaceCloseButtonElement = document.querySelector(
   ".pop-up__close-icon_place"
 );
 const popupPlaceOpenElement = document.querySelector(".profile__add-button");
+const createContent = document.querySelector(".content");
+const addPlaceBtn = document.querySelector(".profile__add-button");
+const placeInput = document.querySelector(".pop-up__input-field_type_place");
+const linkInput = document.querySelector(".pop-up__input-field_type_link");
+const savePlaceBtn = document.querySelector(".pop-up__input-save_place");
 
 function openPlacePopup() {
   popupPlaceElement.classList.add("pop-up_opened");
@@ -37,20 +42,6 @@ function editProfile(evt) {
   jobElement.textContent = inputJobElement.value;
   closePopup();
 }
-
-popupOpenButtonElement.addEventListener("click", openPopup);
-popupPlaceOpenElement.addEventListener("click", openPlacePopup);
-profileElement.addEventListener("submit", editProfile);
-saveButton.addEventListener("click", editProfile);
-popupCloseButtonElement.addEventListener("click", closePopup);
-popupPlaceCloseButtonElement.addEventListener("click", closePlacePopup);
-
-/*фичи ПР5 */
-
-const createContent = document.querySelector(".content");
-const addPlaceBtn = document.querySelector(".profile__add-button");
-const placeInput = document.querySelector(".pop-up__input-field_type_place");
-const linkInput = document.querySelector(".pop-up__input-field_type_link");
 
 const initialCards = [
   {
@@ -80,11 +71,7 @@ const initialCards = [
 ];
 
 const createList = () => {
-  const item = initialCards
-    .map((element) => {
-      return createCard(element);
-    })
-    .join("");
+  const item = initialCards.map((element) => createCard(element)).join("");
   createContent.insertAdjacentHTML("afterbegin", item);
 };
 
@@ -99,14 +86,25 @@ const createCard = (data) => {
 </li>`;
 };
 
-const addPlace = () => {
+const addPlace = (evt) => {
   addPlaceBtn.addEventListener("click", () => {
     const card = createCard({
-      name: placeInput.nodevalue,
-      link: linkInput.nodevalue,
+      name: placeInput.value,
+      link: linkInput.value,
     });
     createContent.insertAdjacentHTML("afterbegin", card);
+    placeInput.value = "";
+    linkInput.value = "";
   });
 };
 
 createList();
+addPlace();
+
+popupOpenButtonElement.addEventListener("click", openPopup);
+popupPlaceOpenElement.addEventListener("click", openPlacePopup);
+profileElement.addEventListener("submit", editProfile);
+saveButton.addEventListener("click", editProfile);
+popupCloseButtonElement.addEventListener("click", closePopup);
+popupPlaceCloseButtonElement.addEventListener("click", closePlacePopup);
+savePlaceBtn.addEventListener("click", createCard);
