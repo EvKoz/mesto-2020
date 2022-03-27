@@ -67,24 +67,28 @@ function closePlacePopup() {
   popupPlaceElement.classList.remove("pop-up_opened");
 }
 
-function renderCards(xyz) {
+function renderCards(data) {
   const newCard = `<li class="content__element">
   <button class="content__element-delete-button" type="button"></button>
-              <img class="content__element-image" alt="Одно из любимых мест" src="${xyz.link}"/>
+              <img class="content__element-image" alt="Одно из любимых мест" src="${data.link}"/>
   <div class="content__element-symbols-container">
-    <h2 class="content__element-text">${xyz.name}</h2>
+    <h2 class="content__element-text">${data.name}</h2>
     <button class="content__element-like-button" type="button"></button>
                 </div>
 </li>`;
 
-  initialCardsList.insertAdjacentHTML('afterbegin', newCard);
+  initialCardsList.insertAdjacentHTML("afterbegin", newCard);
 }
 
 function addCard(event) {
   event.preventDefault();
-  name: event.currentTarget.querySelector('.pop-up__input-field_type_place').value;
-  link: event.currentTarget.querySelector('.pop-up__input-field_type_link').value;
-  renderCards();
+  const newCardName = event.currentTarget.querySelector(
+    ".pop-up__input-field_type_place"
+  ).value;
+  const newCardImg = event.currentTarget.querySelector(
+    ".pop-up__input-field_type_link"
+  ).value;
+  renderCards(newCardName, newCardImg);
 
   closePlacePopup();
 }
