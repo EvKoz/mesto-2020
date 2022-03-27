@@ -82,15 +82,16 @@ function renderCards(data) {
 
 function addCard(event) {
   event.preventDefault();
-  const newCardName = event.currentTarget.querySelector(
+  newCardName = event.currentTarget.querySelector(
     ".pop-up__input-field_type_place"
   ).value;
-  const newCardImg = event.currentTarget.querySelector(
+  newCardLink = event.currentTarget.querySelector(
     ".pop-up__input-field_type_link"
   ).value;
-  renderCards(newCardName, newCardImg);
-
+  renderCards(newCardName, newCardLink);
+event.currentTarget.reset();
   closePlacePopup();
+
 }
 
 initialCards.map(renderCards);
