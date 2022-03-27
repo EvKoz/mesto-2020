@@ -27,7 +27,7 @@
       </section>
       <section>
         <ul class='content'>
-          <!--<li class="content__element">
+          <li class="content__element">
             <button class="content__element-delete-button" type="button"></button>
             <img
               class="content__element-image"
@@ -118,7 +118,7 @@
                 type="button"
               ></button>
             </div>
-          </li>-->
+          </li>
         </ul>
       </section>
     </main>
@@ -158,8 +158,7 @@
         placeholder="Название"
         class="pop-up__input-field pop-up__input-field_type_place"
       />
-      <input
-        type="text"
+      <input type='text'
         placeholder="Ссылка на картинку"
         class="pop-up__input-field pop-up__input-field_type_link"
       />
@@ -169,33 +168,15 @@
 </div>
 
     <script src="./scripts/index.js"></script>
-    <template>
-      const initialCards = [
-  {
-    name: 'Архыз',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
-  },
-  {
-    name: 'Челябинская область',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
-  },
-  {
-    name: 'Иваново',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
-  },
-  {
-    name: 'Камчатка',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
-  },
-  {
-    name: 'Холмогорский район',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
-  },
-  {
-    name: 'Байкал',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
-  }
-];
-    </template>
+    <template class="template">
+      <li class="content__element">
+        <button class="content__element-delete-button" type="button"></button>
+        <img alt="Одно из любимых мест" class="content__element-image" src=""/>
+        <div class="content__element-symbols-container">
+          <h2 class="content__element-text"></h2>
+          <button class="content__element-like-button" type="button"></button>
+        </div>
+        </li>`
+          </template>
   </body>
 </html>
