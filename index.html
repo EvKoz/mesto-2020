@@ -26,9 +26,12 @@
         <button class="profile__add-button" type="button"></button>
       </section>
       <section>
-        <ul class='content'>
+        <ul class="content">
           <li class="content__element">
-            <button class="content__element-delete-button" type="button"></button>
+            <button
+              class="content__element-delete-button"
+              type="button"
+            ></button>
             <img
               class="content__element-image"
               src="./images/1088404.jpg"
@@ -43,8 +46,11 @@
             </div>
           </li>
           <li class="content__element">
-            <button class="content__element-delete-button" type="button"></button>
-                        <img
+            <button
+              class="content__element-delete-button"
+              type="button"
+            ></button>
+            <img
               class="content__element-image"
               alt="Эльбрус"
               src="./images/1404681.jpg"
@@ -55,10 +61,13 @@
                 class="content__element-like-button"
                 type="button"
               ></button>
-                          </div>
+            </div>
           </li>
           <li class="content__element">
-            <button class="content__element-delete-button" type="button"></button>
+            <button
+              class="content__element-delete-button"
+              type="button"
+            ></button>
             <img
               class="content__element-image"
               src="./images/1556355.jpg"
@@ -74,7 +83,10 @@
             </div>
           </li>
           <li class="content__element">
-            <button class="content__element-delete-button" type="button"></button>
+            <button
+              class="content__element-delete-button"
+              type="button"
+            ></button>
             <img
               class="content__element-image"
               src="./images/1404681.jpg"
@@ -89,7 +101,10 @@
             </div>
           </li>
           <li class="content__element">
-            <button class="content__element-delete-button" type="button"></button>
+            <button
+              class="content__element-delete-button"
+              type="button"
+            ></button>
             <img
               class="content__element-image"
               src="./images/1556355.jpg"
@@ -105,7 +120,10 @@
             </div>
           </li>
           <li class="content__element">
-            <button class="content__element-delete-button" type="button"></button>
+            <button
+              class="content__element-delete-button"
+              type="button"
+            ></button>
             <img
               alt="Горная крепость"
               class="content__element-image"
@@ -146,37 +164,44 @@
       </div>
     </div>
 
-<!--Pop-up__place-->
+    <!--Pop-up__place-->
 
-<div class="pop-up__type_place">
-  <div class="pop-up__window pop-up__window_place">
-    <button class="pop-up__close-icon pop-up__close-icon_place" type="button"></button>
-    <h2 class="pop-up__title_place">Новое место</h2>
-    <form class="pop-up__input-form_place" name="pop-up__input-form">
-      <input
-        type="text"
-        placeholder="Название"
-        class="pop-up__input-field pop-up__input-field_type_place"
-      />
-      <input type='text'
-        placeholder="Ссылка на картинку"
-        class="pop-up__input-field pop-up__input-field_type_link"
-      />
-      <button class="pop-up__input-save_place" type="submit">Сохранить</button>
-    </form>
-  </div>
-</div>
+    <div class="pop-up__type_place">
+      <div class="pop-up__window pop-up__window_place">
+        <button
+          class="pop-up__close-icon pop-up__close-icon_place"
+          type="button"
+        ></button>
+        <h2 class="pop-up__title_place">Новое место</h2>
+        <form class="pop-up__input-form_place" name="pop-up__input-form">
+          <input
+            type="text"
+            placeholder="Название"
+            class="pop-up__input-field pop-up__input-field_type_place"
+          />
+          <input
+            type="text"
+            placeholder="Ссылка на картинку"
+            class="pop-up__input-field pop-up__input-field_type_link"
+          />
+          <button class="pop-up__input-save_place" type="submit">
+            Сохранить
+          </button>
+        </form>
+      </div>
+    </div>
 
     <script src="./scripts/index.js"></script>
-    <template id="template">
+    <template id="card-template">
       <li class="content__element">
         <button class="content__element-delete-button" type="button"></button>
-        <img alt="Одно из любимых мест" class="content__element-image" src=""/>
+        <img alt="Одно из любимых мест" class="content__element-image" src="" />
         <div class="content__element-symbols-container">
           <h2 class="content__element-text"></h2>
           <button class="content__element-like-button" type="button"></button>
         </div>
-        </li>`
-          </template>
+      </li>
+      `
+    </template>
   </body>
 </html>

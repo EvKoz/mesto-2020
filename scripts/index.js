@@ -1,52 +1,4 @@
-let addButton = document.querySelector(".profile__add-button");
-const popupPlaceCloseElement = document.querySelector(
-  ".pop-up__close-icon_place"
-);
-let popupPlaceElement = document.querySelector(".pop-up__type_place");
-let popupOpenButtonElement = document.querySelector(".profile__edit-button");
-let popupElement = document.querySelector(".pop-up");
-let popupCloseButtonElement = popupElement.querySelector(".pop-up__close-icon");
-let inputNameElement = document.querySelector(".pop-up__input-field_type_name");
-let nameElement = document.querySelector(".profile__info-name");
-let inputJobElement = document.querySelector(".pop-up__input-field_type_role");
-let jobElement = document.querySelector(".profile__info-role");
-let profileElement = document.querySelector(".profile__info");
-let saveButton = document.querySelector(".pop-up__input-save");
-
-function openPopup() {
-  popupElement.classList.add("pop-up_opened");
-  inputNameElement.value = nameElement.textContent;
-  inputJobElement.value = jobElement.textContent;
-}
-
-function closePopup() {
-  popupElement.classList.remove("pop-up_opened");
-}
-
-function editProfile(evt) {
-  evt.preventDefault();
-  nameElement.textContent = inputNameElement.value;
-  jobElement.textContent = inputJobElement.value;
-  closePopup();
-}
-
-function openPlacePopup() {
-  popupPlaceElement.classList.add("pop-up__place_opened");
-}
-
-function closePlacePopup() {
-  popupPlaceElement.classList.remove("pop-up__place_opened");
-}
-
-popupCloseButtonElement.addEventListener("click", closePopup);
-profileElement.addEventListener("submit", editProfile);
-saveButton.addEventListener("click", editProfile);
-
-popupOpenButtonElement.addEventListener("click", openPopup);
-popupPlaceCloseElement.addEventListener("click", closePlacePopup);
-addButton.addEventListener("click", openPlacePopup);
-
-const initialCards = [
+const initCards = [
   {
     name: "Архыз",
     link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg",
@@ -72,46 +24,65 @@ const initialCards = [
     link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg",
   },
 ];
+const edBtn = document.querySelector(".profile__edit-button");
+const usPop = document.querySelector(".pop-up");
+const usName = document.querySelector(".pop-up__input-field_type_name");
+const usJob = document.querySelector(".pop-up__input-field_type_role");
+const prevUsName = document.querySelector(".profile__info-name");
+const prevUsJob = document.querySelector(".profile__info-role");
+const saveUsBtn = document.querySelector(".pop-up__input-save");
+const closeBtn = document.querySelector(".pop-up__close-icon");
+const adBtn = document.querySelector(".profile__add-button");
+const plPop = document.querySelector(".pop-up__type_place");
+const savePlBtn = document.querySelector(".pop-up__input-form_place");
+const closeAdBtn = document.querySelector(".pop-up__close-icon_place");
+const cardsContainer = document.querySelector(".content");
 
-const container = document.querySelector(".main");
-const cardsContainer = container.querySelector(".content");
-const savePlaceButton = container.querySelector(".pop-up__input-save_place");
-const delButton = container.querySelector(".content__element-delete-button");
-
-function renderCards(data) {
-  const newCard = `<li class="content__element">
-  <button class="content__element-delete-button" type="button"></button>
-              <img class="content__element-image" alt="Одно из любимых мест" src="${data.link}"/>
-  <div class="content__element-symbols-container">
-    <h2 class="content__element-text">${data.name}</h2>
-    <button class="content__element-like-button" type="button"></button>
-                </div>
-</li>`;
-
-  cardsContainer.insertAdjacentHTML("afterbegin", newCard);
+function edData() {
+  usPop.classList.add("pop-up_opened");
+  usName.value = prevUsName.textContent;
+  usJob.value = prevUsJob.textContent;
 }
 
-initialCards.map(renderCards);
+function saveUs(evt) {
+  evt.preventDefault();
+  prevUsName.textContent = usName.value;
+  prevUsJob.textContent = usJob.value;
+  closeUs();
+}
+
+function closeUs() {
+  usPop.classList.remove("pop-up_opened");
+}
+
+function addPlace() {
+  plPop.classList.add("pop-up_opened");
+}
+
+function closePlace() {
+  plPop.classList.remove("pop-up_opened");
+}
 
 function addCard(nameValue, linkValue) {
-  evt.preventDefault();
-  const cardTemplate = document.querySelector("#template").content;
+  const cardTemplate = document.querySelector("#card-template").content;
   const cardElement = cardTemplate
     .querySelector(".content__element")
     .cloneNode(true);
-  cardElement.querySelector(".content__element-image").textContent = linkValue;
+  cardElement.querySelector(".content__element-image").src = linkValue;
   cardElement.querySelector(".content__element-text").textContent = nameValue;
-  cardElement
-    .querySelector(".content__element-like-button")
-    .addEventListener("click", function (evt) {
-      evt.target.classList.toggle(".content__element-like-button_active");
-    });
-  cardsContainer.append(cardElement);
-}
-savePlaceButton.addEventListener("click", function () {
-  const name = document.querySelector(".content__element-text");
-  const link = document.querySelector(".content__element-image");
-  addCard(name.value, link.value);
+  cardsContainer.prepend(cardElement);
+  }
 
-  closePlacePopup();
+savePlBtn.addEventListener("submit", function (evt) { //почему слушатель работает с формой, а не с кнопкой?
+  evt.preventDefault();
+  const name = document.querySelector(".pop-up__input-field_type_place");
+  const link = document.querySelector(".pop-up__input-field_type_link");
+  addCard(name.value, link.value);
+  closePlace();
 });
+
+edBtn.addEventListener("click", edData);
+saveUsBtn.addEventListener("click", saveUs);
+closeBtn.addEventListener("click", closeUs);
+adBtn.addEventListener("click", addPlace);
+closeAdBtn.addEventListener("click", closePlace);
