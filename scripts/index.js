@@ -37,6 +37,7 @@ const plPop = document.querySelector(".pop-up__type_place");
 const savePlBtn = document.querySelector(".pop-up__input-form_place");
 const closeAdBtn = document.querySelector(".pop-up__close-icon_place");
 const cardsContainer = document.querySelector(".content");
+const delBtn = document.querySelector(".content__element-delete-button");
 
 function edData() {
   usPop.classList.add("pop-up_opened");
@@ -63,23 +64,45 @@ function closePlace() {
   plPop.classList.remove("pop-up_opened");
 }
 
+/*function createCards () {
+  const newCard = document.querySelector(".card-template").content.firstElementChild.cloneNode(true);
+newCard.querySelector(".content__element-text").textContent = nameValue;
+newCard.querySelector(".content__element-image").src = linkValue;
+cardsContainer.append(newCard)
+}*/
+
 function addCard(nameValue, linkValue) {
-  const cardTemplate = document.querySelector("#card-template").content;
+  const cardTemplate = document.querySelector(".card-template").content;
   const cardElement = cardTemplate
     .querySelector(".content__element")
     .cloneNode(true);
   cardElement.querySelector(".content__element-image").src = linkValue;
   cardElement.querySelector(".content__element-text").textContent = nameValue;
+  cardElement
+    .querySelector(".content__element-like-button")
+    .addEventListener("click", function (event) {
+      event.target.classList.toggle("content__element-like-button_active");
+          });
+          delBtn.addEventListener("click", function () {
+            const listItem = delBtn.closest('.content__element');
+            listItem.remove();
+          });
   cardsContainer.prepend(cardElement);
-  }
+}
 
-savePlBtn.addEventListener("submit", function (evt) { //почему слушатель работает с формой, а не с кнопкой?
+savePlBtn.addEventListener("submit", function (evt) {
+  //почему слушатель работает с формой, а не с кнопкой?
   evt.preventDefault();
   const name = document.querySelector(".pop-up__input-field_type_place");
   const link = document.querySelector(".pop-up__input-field_type_link");
   addCard(name.value, link.value);
+ //createCards();
+  name.value = "";
+  link.value = "";
   closePlace();
 });
+
+//initCards.map(createCards);
 
 edBtn.addEventListener("click", edData);
 saveUsBtn.addEventListener("click", saveUs);
