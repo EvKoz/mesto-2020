@@ -64,13 +64,6 @@ function closePlace() {
   plPop.classList.remove("pop-up_opened");
 }
 
-/*function createCards () {
-  const newCard = document.querySelector(".card-template").content.firstElementChild.cloneNode(true);
-newCard.querySelector(".content__element-text").textContent = nameValue;
-newCard.querySelector(".content__element-image").src = linkValue;
-cardsContainer.append(newCard)
-}*/
-
 function addCard(nameValue, linkValue) {
   const cardTemplate = document.querySelector(".card-template").content;
   const cardElement = cardTemplate
@@ -82,11 +75,10 @@ function addCard(nameValue, linkValue) {
     .querySelector(".content__element-like-button")
     .addEventListener("click", function (event) {
       event.target.classList.toggle("content__element-like-button_active");
-          });
-          delBtn.addEventListener("click", function () {
-            const listItem = delBtn.closest('.content__element');
-            listItem.remove();
-          });
+    });
+    cardElement.querySelector(".content__element-delete-button").addEventListener("click", function (event) {
+      event.target.closest('.content__element').remove();
+    })
   cardsContainer.prepend(cardElement);
 }
 
@@ -96,13 +88,10 @@ savePlBtn.addEventListener("submit", function (evt) {
   const name = document.querySelector(".pop-up__input-field_type_place");
   const link = document.querySelector(".pop-up__input-field_type_link");
   addCard(name.value, link.value);
- //createCards();
   name.value = "";
   link.value = "";
   closePlace();
 });
-
-//initCards.map(createCards);
 
 edBtn.addEventListener("click", edData);
 saveUsBtn.addEventListener("click", saveUs);
