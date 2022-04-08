@@ -1,4 +1,4 @@
-const initCards = [
+const initialCards = [
   {
     name: "Архыз",
     link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg",
@@ -24,6 +24,7 @@ const initCards = [
     link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg",
   },
 ];
+
 const edBtn = document.querySelector(".profile__edit-button");
 const usPop = document.querySelector(".pop-up");
 const usName = document.querySelector(".pop-up__input-field_type_name");
@@ -38,6 +39,7 @@ const savePlBtn = document.querySelector(".pop-up__input-form_place");
 const closeAdBtn = document.querySelector(".pop-up__close-icon_place");
 const cardsContainer = document.querySelector(".content");
 const delBtn = document.querySelector(".content__element-delete-button");
+const cardTemplate = document.querySelector(".card-template").content;
 
 function edData() {
   usPop.classList.add("pop-up_opened");
@@ -84,12 +86,12 @@ function addCard(nameValue, linkValue) {
   cardsContainer.prepend(cardElement);
 }
 
-initCards.forEach(function (item){
-  const cardTemplate = document.querySelector(".card-template").content;
-  const cardElement = cardTemplate.querySelector(".content__element").cloneNode(true);
-    cardElement.querySelector(".content__element-text").textContent = item.name;
-    cardsContainer.append(cardElement)
-})
+initialCards.forEach(function (item) {
+  const cardElement = cardTemplate.cloneNode(true);
+  cardElement.querySelector(".content__element-text").textContent = item.name;
+  cardElement.querySelector(".content__element-image").src = item.link;
+  cardsContainer.prepend(cardElement);
+});
 
 savePlBtn.addEventListener("submit", function (evt) {
   //почему слушатель работает с формой, а не с кнопкой?
