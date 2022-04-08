@@ -90,6 +90,16 @@ initialCards.forEach(function (item) {
   const cardElement = cardTemplate.cloneNode(true);
   cardElement.querySelector(".content__element-text").textContent = item.name;
   cardElement.querySelector(".content__element-image").src = item.link;
+  cardElement
+    .querySelector(".content__element-like-button")
+    .addEventListener("click", function (event) {
+      event.target.classList.toggle("content__element-like-button_active");
+    });
+  cardElement
+    .querySelector(".content__element-delete-button")
+    .addEventListener("click", function (event) {
+      event.target.closest(".content__element").remove();
+    });
   cardsContainer.prepend(cardElement);
 });
 
