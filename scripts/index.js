@@ -76,11 +76,20 @@ function addCard(nameValue, linkValue) {
     .addEventListener("click", function (event) {
       event.target.classList.toggle("content__element-like-button_active");
     });
-    cardElement.querySelector(".content__element-delete-button").addEventListener("click", function (event) {
-      event.target.closest('.content__element').remove();
-    })
+  cardElement
+    .querySelector(".content__element-delete-button")
+    .addEventListener("click", function (event) {
+      event.target.closest(".content__element").remove();
+    });
   cardsContainer.prepend(cardElement);
 }
+
+initCards.forEach(function (item){
+  const cardTemplate = document.querySelector(".card-template").content;
+  const cardElement = cardTemplate.querySelector(".content__element").cloneNode(true);
+    cardElement.querySelector(".content__element-text").textContent = item.name;
+    cardsContainer.append(cardElement)
+})
 
 savePlBtn.addEventListener("submit", function (evt) {
   //почему слушатель работает с формой, а не с кнопкой?
