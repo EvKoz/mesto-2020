@@ -8,8 +8,8 @@ const initialCards = [
     link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg",
   },
   {
-    name: "Иваново",
-    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg",
+    name: "Запорожье",
+    link: "https://images.unsplash.com/photo-1588069253177-22ddb2be7fa0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8JUQwJUI3JUQwJUIwJUQwJUJGJUQwJUJFJUQxJTgwJUQwJUJFJUQwJUI2JUQxJThDJUQwJUI1fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
   },
   {
     name: "Камчатка",
