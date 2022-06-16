@@ -1,0 +1,13 @@
+.pop-up__window-pic {
+  max-width: 75vw;
+  max-height: 75vh;
+  /*background-color: transparent;*/
+  /*display: flex;*/
+}
+
+@media (max-width: 950px) {
+  .pop-up__window-pic {
+    /*width: 282px;
+    min-height: 322px;*/
+  }
+}
