@@ -104,7 +104,6 @@ initialCards.forEach(function (item) {
 });
 
 savePlBtn.addEventListener("submit", function (evt) {
-  //почему слушатель работает с формой, а не с кнопкой?
   evt.preventDefault();
   const name = document.querySelector(".pop-up__input-field_type_place");
   const link = document.querySelector(".pop-up__input-field_type_link");
